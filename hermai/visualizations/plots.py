@@ -20,7 +20,8 @@ def plot_local_feature_importance(explanation):
 def plot_general_feature_importance(explanation): # <-- DEĞİŞTİ
     """Plots a bar chart for general feature importances."""
     plt.figure(figsize=(10, 8))
-    sns.barplot(x='importance', y='feature', data=explanation.feature_importances.head(15), palette='viridis')
+    sns.barplot(x='importance', y='feature', data=explanation.feature_importances.head(15), palette='viridis',
+                hue='feature', legend=False, dodge=False)
     plt.xlabel("Feature Importance (Gini)")
     plt.ylabel("Feature")
     plt.title("General Feature Importance (from Surrogate Model)") # <-- DEĞİŞTİ
