@@ -1,0 +1,6 @@
+dataset,model,explainer,run_sign_agreement,run_jaccard,run_sign_agreement_unit,run_jaccard_unit
+breast,rf,HermAI-H,0.664,0.5835999999999999,0.7053333333333334,0.6036
+breast,rf,LIME,0.788,0.7148,0.828,0.7572000000000001
+breast,rf,KernelSHAP,0.932,0.9012,0.9546666666666667,0.932
+breast,rf,HermAI-0.1.8,0.4293333333333333,0.9032,0.35466666666666663,0.928
+breast,rf,HermAI-0.1.8-cov,0.6213333333333333,0.57,0.7533333333333334,0.8424

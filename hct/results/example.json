@@ -1,0 +1,73 @@
+{
+ "instance": 122,
+ "prob": 0.6042976190476191,
+ "decision": 1,
+ "old": [
+  {
+   "feature": "Glucose",
+   "value": 100.0,
+   "mean": 120.72253258845437,
+   "sentence": "Feature 'Glucose' increases the probability.",
+   "literal_pass": true,
+   "natural_pass": false
+  },
+  {
+   "feature": "Pregnancies",
+   "value": 8.0,
+   "mean": 4.035381750465549,
+   "sentence": "Feature 'Pregnancies' increases the probability.",
+   "literal_pass": true,
+   "natural_pass": true
+  },
+  {
+   "feature": "DiabetesPedigree",
+   "value": 0.661,
+   "mean": 0.47332216014897577,
+   "sentence": "Feature 'DiabetesPedigree' increases the probability.",
+   "literal_pass": true,
+   "natural_pass": true
+  }
+ ],
+ "new": [
+  {
+   "feature": "Glucose",
+   "value": 100.0,
+   "sentence": "The value of Glucose (100) lowers the predicted probability.",
+   "natural_pass": true
+  },
+  {
+   "feature": "Pregnancies",
+   "value": 8.0,
+   "sentence": "The value of Pregnancies (8) raises the predicted probability.",
+   "natural_pass": true
+  },
+  {
+   "feature": "Insulin",
+   "value": 215.0,
+   "sentence": "The value of Insulin (215) raises the predicted probability.",
+   "natural_pass": true
+  }
+ ],
+ "old_cf": {
+  "valid": true,
+  "on_horizon": false,
+  "changed": 8,
+  "l1": 0.7617530263991592
+ },
+ "new_cf": {
+  "valid": true,
+  "on_horizon": true,
+  "changed": 2,
+  "l1": 0.7738895824244387,
+  "changes": {
+   "Pregnancies": [
+    8.0,
+    6.0
+   ],
+   "Glucose": [
+    100.0,
+    94.0
+   ]
+  }
+ }
+}

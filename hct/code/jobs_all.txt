@@ -1,0 +1,20 @@
+adversarial 0
+planted 0
+main breast rf 0
+main breast mlp 0
+main adult rf 0
+main adult mlp 0
+main pima rf 0
+main pima mlp 0
+main compas rf 0
+main compas mlp 0
+permuted pima 0
+permuted breast 0
+main pima rf 1
+main pima mlp 1
+main compas rf 1
+main compas mlp 1
+main pima rf 2
+main pima mlp 2
+main compas rf 2
+main compas mlp 2
