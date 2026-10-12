@@ -15,8 +15,8 @@ from hermai.explainers import LocalExplainer, GeneralExplainer # <-- Daha temiz 
 # --- 1. Data Loading and Preparation ---
 print("🚢 1. Loading and preparing the Titanic dataset...")
 df = sns.load_dataset('titanic').drop(['deck', 'embark_town', 'alive', 'who', 'adult_male', 'alone', 'class'], axis=1)
-df['age'].fillna(df['age'].median(), inplace=True)
-df['embarked'].fillna(df['embarked'].mode()[0], inplace=True)
+df['age'] = df['age'].fillna(df['age'].median())
+df['embarked'] = df['embarked'].fillna(df['embarked'].mode()[0])
 df.dropna(inplace=True)
 df['sex'] = LabelEncoder().fit_transform(df['sex'])
 df['embarked'] = LabelEncoder().fit_transform(df['embarked'])
