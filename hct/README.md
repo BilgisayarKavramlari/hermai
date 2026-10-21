@@ -24,15 +24,20 @@ not yet part of the `hermai` package API.
 | `code/audit_consistency.py` | Run-to-run consistency of the explainers, over features and over meaning units |
 | `code/example_narrative.py` | Worked example on one Pima Diabetes case |
 | `code/aggregate_and_plot.py` | Builds `results/summary.json` and the figures (written to `figures/`) |
+| `code/baselines.py` | Established metrics on the same explanations that HCT scored: prediction gap on important features (PGI), deletion curves and faithfulness correlation, each with marginal or training-mean and conditional replacement, and the disagreement metrics of Krishna et al. |
+| `code/roar.py` | Remove-and-retrain (ROAR) on the Pima and Breast Cancer settings |
+| `code/adaptive_attack.py` | Scaffold attacks A0–A3 on COMPAS: the original attack, a horizon-aware, a test-aware and a memorising attacker |
+| `code/revision_analysis.py` | Builds `results/revision_summary.json` and the revised Figure 1 and Figure 6 |
+| `code/run_revision_jobs.sh` | Runs the `baselines.py` and `roar.py` jobs of the article |
 | `code/get_data.sh` | Downloads the public datasets into `data/` |
-| `code/jobs_all.txt` | The exact list of runs used for the article |
-| `results/` | Per-instance and per-setting result files; `summary.json` holds every number reported in the article |
+| `code/jobs_all.txt` | The exact list of `run_experiments.py` runs used for the article |
+| `results/` | Per-instance and per-setting result files; `summary.json` and `revision_summary.json` hold every number reported in the article |
 
 ## Environment
 
-Python 3.13, scikit-learn 1.9.1, numpy 2.x, pandas 3.x, shap 0.52.0, lime 0.2.0.1, hermai 0.1.8 and matplotlib. lime 0.2.0.1 is pure
-Python; if its setup script fails under a recent setuptools, placing the `lime` package folder from its source distribution on the
-Python path is enough.
+Python 3.13, scikit-learn 1.9.1, numpy 2.x, pandas 3.x, scipy, shap 0.52.0, lime 0.2.0.1, hermai 0.1.8 and matplotlib. lime 0.2.0.1
+is pure Python; if its setup script fails under a recent setuptools, placing the `lime` package folder from its source distribution on
+the Python path is enough (for `run_revision_jobs.sh`, set `LIME_SRC` to that folder).
 
 ## Reproduce
 
@@ -44,10 +49,19 @@ python audit_consistency.py pima rf 25
 python audit_consistency.py breast rf 25
 python example_narrative.py
 python aggregate_and_plot.py                    # results/summary.json and figures/
+# analyses added in the revision
+sh run_revision_jobs.sh baselines               # baselines.py for {breast,pima,compas,adult} x {rf,mlp}
+sh run_revision_jobs.sh roar                    # roar.py for {pima,breast} x {rf,mlp}
+for a in A0 A1 A2 A3; do python adaptive_attack.py $a 0; done
+python revision_analysis.py                     # results/revision_summary.json, Figures 1 and 6
 ```
 
-The full set of runs takes about 1.5 CPU-hours. The result files in `results/` are the ones used for the article, so
-`python aggregate_and_plot.py` alone regenerates `summary.json` and all figures.
+The original runs take about 1.5 CPU-hours and the revision adds about 0.6 CPU-hours. `adaptive_attack.py A0` reproduces the
+original scaffold experiment exactly (same claims and outcomes as `results/adversarial_s0.csv`). Run `revision_analysis.py` after
+`aggregate_and_plot.py`, because it replaces the Figure 1 of the original submission with the revised two-panel figure.
+
+The result files in `results/` are the ones used for the article, so `python aggregate_and_plot.py` followed by
+`python revision_analysis.py` regenerates both summary files and all figures without rerunning any experiment.
 
 ## Data
 
