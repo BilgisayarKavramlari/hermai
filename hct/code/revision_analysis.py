@@ -279,7 +279,7 @@ def fig_framework():
     box(ax, 0.1, 2.15, 1.95, 1.7, "Explanation", "attributions\nnarrative claims\ncounterfactual\nevidence points", "#f0efec")
     mids = [("Interpreter 1: the data", "Horizon Plausibility (HP): evidence points\ninside the conformal, scale-aware horizon"),
             ("Interpreter 2: the model", "Claim Verification Rate (CVR): every sentence\nbecomes an on-horizon intervention test"),
-            ("The whole at four context scales", "Part-Whole Agreement (PWA), radius (HHR):\nthe local account vs. the surrogate whole"),
+            ("The whole at four context scales", "Part–Whole Agreement (PWA), radius (HHR):\nthe local account vs. the surrogate whole"),
             ("Interpreter 3: machine readers", "Hermeneutic Gain (HG): readers learn the\nmodel from explanations vs. chance")]
     ys = [4.6, 3.1, 1.6, 0.1]
     for (t, b), y in zip(mids, ys):

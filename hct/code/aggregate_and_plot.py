@@ -293,7 +293,7 @@ def make_figures(S, seed0, stack):
     box(0.1, 2.15, 1.95, 1.7, "Explanation", "attributions\nnarrative claims\ncounterfactual\nevidence points", "#f0efec")
     mids = [("Interpreter 1: the data", "Horizon Plausibility (HP): evidence points\ninside the conformal, scale-aware horizon"),
             ("Interpreter 2: the model", "Claim Verification Rate (CVR): every sentence\nbecomes an on-horizon intervention test"),
-            ("The whole at four context scales", "Part-Whole Agreement (PWA), radius (HHR):\nthe local account vs. the surrogate whole"),
+            ("The whole at four context scales", "Part–Whole Agreement (PWA), radius (HHR):\nthe local account vs. the surrogate whole"),
             ("Interpreter 3: machine readers", "Hermeneutic Gain (HG): readers learn the\nmodel from explanations vs. chance")]
     ys = [4.6, 3.1, 1.6, 0.1]
     for (t, b), y in zip(mids, ys):
@@ -331,7 +331,7 @@ def make_figures(S, seed0, stack):
                 solid_capstyle="round")
     ax.set_xticks(range(4))
     ax.set_xticklabels(["whole data\n(s = 1)", "s = 1/2", "s = 1/4", "s = 1/8"])
-    ax.set_ylabel("Part-Whole Agreement (PWA$_s$)")
+    ax.set_ylabel("Part–Whole Agreement (PWA$_s$)")
     ax.set_xlabel("Context scale of the whole (share of training data nearest to the instance)")
     ax.set_ylim(0, 1)
     ax.legend(loc="center left", bbox_to_anchor=(1.0, 0.5), fontsize=7.4)
