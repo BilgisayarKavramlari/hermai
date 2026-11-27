@@ -12,13 +12,18 @@ except FileNotFoundError:
 
 setup(
     name='hermai',
-    version='0.1.8',  
+    version='0.1.9',  
     author='sadi evren seker',
     author_email='hermai@sadievrenseker.com',
     description='A hermeneutic approach to explainable AI (XAI) with contextual and narrative explanations.',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/bilgisayarkavramlari/hermai', 
+    url='https://github.com/bilgisayarkavramlari/hermai',
+    project_urls={
+        'Source': 'https://github.com/BilgisayarKavramlari/hermai',
+        'Paper (HCT)': 'https://doi.org/10.3390/make8110381',
+        'Verifier (xai-claims)': 'https://github.com/BilgisayarKavramlari/xai-claims',
+    },
     packages=[
         'hermai',
         'hermai.core',
