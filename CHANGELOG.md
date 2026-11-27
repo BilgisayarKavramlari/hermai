@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.10 (2026-11-27)
+
+No change to the library code.
+
+- `CITATION.cff` and `.zenodo.json`: citation metadata; every GitHub release is archived on Zenodo with a DOI.
+
 ## 0.1.9 (2026-11-27)
 
 No change to the library code.

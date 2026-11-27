@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it and the articles below."
+title: "hermai: a hermeneutic explainable AI library"
+abstract: "Contextual, narrative and actionable explanations for machine learning models: local explanations with counterfactuals, general surrogate explanations and narrative summaries."
+type: software
+authors:
+  - family-names: "Şeker"
+    given-names: "Şadi Evren"
+    orcid: "https://orcid.org/0000-0002-7323-3695"
+    affiliation: "The University of Texas at Dallas"
+version: 0.1.10
+date-released: 2026-11-27
+license: MIT
+repository-code: "https://github.com/BilgisayarKavramlari/hermai"
+keywords:
+  - explainable AI
+  - XAI
+  - hermeneutics
+  - counterfactual explanations
+  - narrative explanations
+references:
+  - type: article
+    authors:
+      - family-names: "Şeker"
+        given-names: "Şadi Evren"
+      - family-names: "Arslanhan"
+        given-names: "Zümra"
+    title: "Hermai: A Hermeneutic Framework for Context-Aware and Narrative Explainable AI"
+    journal: "Artificial Intelligence Theory and Applications"
+    volume: 6
+    issue: 1
+    start: 56
+    end: 74
+    year: 2026
+  - type: article
+    authors:
+      - family-names: "Şeker"
+        given-names: "Şadi Evren"
+    title: "Measuring the Hermeneutic Circle in Explainable AI: A Human-Free Test Based on Data Horizons, Executable Claims, Part–Whole Agreement, and Machine Readers"
+    journal: "Machine Learning and Knowledge Extraction"
+    volume: 8
+    issue: 11
+    start: 381
+    year: 2026
+    doi: "10.3390/make8110381"
