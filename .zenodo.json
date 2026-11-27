@@ -3,12 +3,25 @@
   "upload_type": "software",
   "description": "Contextual, narrative and actionable explanations for machine learning models: local explanations with counterfactuals, general surrogate explanations and narrative summaries. The repository also contains the reproduction code of the Hermeneutic Circle Test (Machine Learning and Knowledge Extraction, 2026).",
   "creators": [
-    {"name": "Şeker, Şadi Evren", "orcid": "0000-0002-7323-3695", "affiliation": "The University of Texas at Dallas"}
+    {
+      "name": "Şeker, Şadi Evren",
+      "orcid": "0000-0002-7323-3695",
+      "affiliation": "The University of Texas at Dallas"
+    }
   ],
   "license": "MIT",
-  "keywords": ["explainable AI", "XAI", "hermeneutics", "counterfactual explanations", "narrative explanations"],
+  "keywords": [
+    "explainable AI",
+    "XAI",
+    "hermeneutics",
+    "counterfactual explanations",
+    "narrative explanations"
+  ],
   "related_identifiers": [
-    {"identifier": "10.3390/make8110381", "relation": "isSupplementTo", "scheme": "doi", "resource_type": "publication-article"},
-    {"identifier": "https://pypi.org/project/hermai/", "relation": "isIdenticalTo", "scheme": "url"}
+    {
+      "identifier": "10.3390/make8110381",
+      "relation": "isSupplementTo",
+      "scheme": "doi"
+    }
   ]
 }
