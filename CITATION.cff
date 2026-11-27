@@ -9,6 +9,7 @@ authors:
     orcid: "https://orcid.org/0000-0002-7323-3695"
     affiliation: "The University of Texas at Dallas"
 version: 0.1.10
+doi: "10.5281/zenodo.24596854"
 date-released: 2026-11-27
 license: MIT
 repository-code: "https://github.com/BilgisayarKavramlari/hermai"

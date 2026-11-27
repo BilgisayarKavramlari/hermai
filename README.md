@@ -1,6 +1,8 @@
 # Hermai: A Hermeneutic Explainable AI Library
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PyPI](https://img.shields.io/pypi/v/hermai.svg)](https://pypi.org/project/hermai/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24596854.svg)](https://doi.org/10.5281/zenodo.24596854)
 
 Hermai is a Python library for explainable AI (XAI) that focuses on providing contextual, narrative, and actionable explanations for machine learning models. Inspired by hermeneutics, it aims to create a dialogue between the user and the model's decision-making process.
 <p align="center">
@@ -99,7 +101,7 @@ readers (HG), including the HermAI-H prototype. It reproduces the results of the
 
 ## Publications
 
-If you use hermai, please cite:
+If you use hermai, please cite the software (https://doi.org/10.5281/zenodo.24596854, all versions) and:
 
 - Ş. E. Şeker and Z. Arslanhan (2026). Hermai: A Hermeneutic Framework for Context-Aware and Narrative Explainable AI.
   *Artificial Intelligence Theory and Applications*, 6(1), 56–74.
